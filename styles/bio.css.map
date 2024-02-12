@@ -1,1 +1,1 @@
-{"version":3,"sources":["partials/_typograpgy.scss","bio.css"],"names":[],"mappings":"AAAA;EACI,qBAAA;EACA,qIACI;ACAR;ADKA;EACI,qBAAA;EACA,sIACI;EAEJ,iBAAA;ACLJ;ADQA;EACI,qBAAA;EACA,sIACI;EAEJ,gBAAA;ACRJ","file":"bio.css"}
+{"version":3,"sources":["partials/_typograpgy.scss","bio.css","partials/_global.scss"],"names":[],"mappings":"AAAA;EACI,qBAAA;EACA,qIACI;ACAR;ADKA;EACI,qBAAA;EACA,sIACI;EAEJ,iBAAA;ACLJ;ADQA;EACI,qBAAA;EACA,sIACI;EAEJ,gBAAA;ACRJ;ACXA;;EAEI,YAAA;EACA,WAAA;EACA,qBAAA;ADaJ","file":"bio.css"}
