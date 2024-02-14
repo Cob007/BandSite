@@ -142,7 +142,7 @@
   }
 
   &__images {
-    width: 90vw;
+    width: 100%;
 
     @include tablet {
       width: 28vw;
@@ -157,7 +157,6 @@
   padding: 16px;
 
   &__social {
-     
     @include tablet {
       display: flex;
       flex-direction: row;
@@ -187,7 +186,6 @@
 
   &__item {
     margin-right: 40px;
-  
   }
 
   &__img {
@@ -197,6 +195,23 @@
     }
   }
 
+  &__body {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &__newyork, &__america{
+    flex-grow: 1;
+  }
+  &__europe {
+    flex-grow: 2;
+  }
+
+  &__name, &__address , &__email, &__copyright {
+    color: $secondary-color-alabaster;
+  }
 
 
   &__applogo {
@@ -208,8 +223,7 @@
       position: absolute;
       top: 0;
       right: 0;
-      margin: 70px 16px 0 0; 
+      margin: 70px 16px 0 0;
     }
-
   }
 }

@@ -200,7 +200,7 @@ body {
   justify-self: center;
 }
 .about-container__images {
-  width: 90vw;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   .about-container__images {
@@ -250,6 +250,22 @@ body {
 }
 .fcontainer__img--facebook {
   width: 2vw;
+}
+@media screen and (min-width: 768px) {
+  .fcontainer__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.fcontainer__newyork, .fcontainer__america {
+  flex-grow: 1;
+}
+.fcontainer__europe {
+  flex-grow: 2;
+}
+.fcontainer__name, .fcontainer__address, .fcontainer__email, .fcontainer__copyright {
+  color: #FAFAFA;
 }
 .fcontainer__applogo--img {
   width: 20vw;
