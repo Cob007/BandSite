@@ -37,15 +37,21 @@ body {
         font-size: 2rem;
     }
 
+    &__selected {
+        padding-bottom: 20px;
+        border-bottom: 4px solid $primary-color-white;
+    }
+
     &__tab {
         text-decoration: none;
         color: $primary-color-silver;
     }
 
-    &__selected {
-        padding-bottom: 20px;
-        border-bottom: 4px solid $primary-color-white;
+    &__inactive {
+        color: $primary-color-white;
     }
+
+    
 
 
 
