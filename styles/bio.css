@@ -17,4 +17,48 @@ body {
   padding: 0px;
   margin: 0px;
   font-family: "Avenir";
+}
+
+.nav-bar {
+  display: flex;
+  background-color: #323232;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.nav-bar__applogo {
+  width: 40vw;
+  align-self: center;
+  padding: 32px;
+}
+.nav-bar__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-grow: 4;
+  margin: 0px;
+  padding: 0px;
+}
+.nav-bar__item {
+  width: 50vw;
+  text-align: center;
+  font-size: 2rem;
+}
+.nav-bar__tab {
+  text-decoration: none;
+  color: #AFAFAF;
+}
+.nav-bar__selected {
+  padding-bottom: 20px;
+  border-bottom: 4px solid #FFFFFF;
+}
+
+.hero-container {
+  background-image: url("../assets/images/hero-bio.jpg");
+  width: 100%;
+  margin: 0;
+}
+.hero-container__name {
+  font-family: "Avenir";
+  font-size: 4rem;
 }/*# sourceMappingURL=bio.css.map */

@@ -2,3 +2,17 @@
 @use "./partials/variable" as *;
 @use "./partials/mixins" as *;
 @use "./partials//global" as *;
+
+
+
+
+.hero-container {
+    background-image: url("../assets/images/hero-bio.jpg");
+    width: 100%;
+    margin: 0;
+
+    &__name {
+        font-family: 'Avenir';
+        font-size: 4rem;
+    }
+}

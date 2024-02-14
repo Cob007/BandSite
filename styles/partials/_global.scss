@@ -1,8 +1,54 @@
 @use "./typograpgy" as *;
+@use "./variable" as *;
 
 html,
 body {
     padding: 0px;
     margin: 0px;
     font-family:"Avenir";
+}
+
+.nav-bar {
+    display: flex;
+    background-color: $primary-color-black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+
+
+    &__applogo {
+        width: 40vw;
+        align-self: center;  
+        padding: 32px;  
+    }
+
+    &__list {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-grow: 4;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    &__item { 
+        width: 50vw;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    &__tab {
+        text-decoration: none;
+        color: $primary-color-silver;
+    }
+
+    &__selected {
+        padding-bottom: 20px;
+        border-bottom: 4px solid $primary-color-white;
+    }
+
+
+
+
+
 }
