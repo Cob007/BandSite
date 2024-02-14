@@ -1,5 +1,6 @@
 @use "./typograpgy" as *;
 @use "./variable" as *;
+@use "./mixins" as *;
 
 html,
 body {
@@ -34,7 +35,10 @@ body {
     &__item { 
         width: 50vw;
         text-align: center;
-        font-size: 2rem;
+        font-size: 1rem;
+        @include tablet {
+            font-size: 2rem;
+        }
     }
 
     &__selected {
