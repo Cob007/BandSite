@@ -26,10 +26,21 @@ body {
   justify-content: center;
   align-items: stretch;
 }
+@media screen and (min-width: 768px) {
+  .nav-bar {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+}
 .nav-bar__applogo {
   width: 40vw;
   align-self: center;
   padding: 32px;
+}
+@media screen and (min-width: 768px) {
+  .nav-bar__applogo {
+    width: 15vw;
+  }
 }
 .nav-bar__list {
   list-style: none;
@@ -39,6 +50,11 @@ body {
   margin: 0px;
   padding: 0px;
 }
+@media screen and (min-width: 768px) {
+  .nav-bar__list {
+    flex-grow: 1;
+  }
+}
 .nav-bar__item {
   width: 50vw;
   text-align: center;
@@ -46,12 +62,18 @@ body {
 }
 @media screen and (min-width: 768px) {
   .nav-bar__item {
+    width: 15vw;
     font-size: 2rem;
   }
 }
 .nav-bar__selected {
   padding-bottom: 20px;
   border-bottom: 4px solid #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .nav-bar__selected {
+    padding-bottom: 10px;
+  }
 }
 .nav-bar__tab {
   text-decoration: none;
@@ -267,8 +289,16 @@ body {
 .fcontainer__name, .fcontainer__address, .fcontainer__email, .fcontainer__copyright {
   color: #FAFAFA;
 }
+.fcontainer__address, .fcontainer__email {
+  font-size: 1.2rem;
+}
 .fcontainer__applogo--img {
-  width: 20vw;
+  width: 40vw;
+}
+@media screen and (min-width: 768px) {
+  .fcontainer__applogo--img {
+    width: 20vw;
+  }
 }
 @media screen and (min-width: 768px) {
   .fcontainer__applogo {

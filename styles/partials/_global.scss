@@ -16,11 +16,21 @@ body {
     justify-content: center;
     align-items: stretch;
 
+    @include tablet {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
 
     &__applogo {
         width: 40vw;
         align-self: center;  
         padding: 32px;  
+
+        @include tablet {
+            width: 15vw
+        }
+
     }
 
     &__list {
@@ -30,6 +40,10 @@ body {
         flex-grow: 4;
         margin: 0px;
         padding: 0px;
+
+        @include tablet {
+            flex-grow: 1;
+        }
     }
 
     &__item { 
@@ -37,6 +51,7 @@ body {
         text-align: center;
         font-size: 1rem;
         @include tablet {
+            width: 15vw;
             font-size: 2rem;
         }
     }
@@ -44,6 +59,10 @@ body {
     &__selected {
         padding-bottom: 20px;
         border-bottom: 4px solid $primary-color-white;
+
+        @include tablet {
+            padding-bottom: 10px;
+        }
     }
 
     &__tab {

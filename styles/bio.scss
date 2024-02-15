@@ -202,21 +202,34 @@
       justify-content: space-between;
     }
   }
-  &__newyork, &__america{
+
+  &__newyork,
+  &__america {
     flex-grow: 1;
   }
+
   &__europe {
     flex-grow: 2;
   }
 
-  &__name, &__address , &__email, &__copyright {
+  &__name,
+  &__address,
+  &__email,
+  &__copyright {
     color: $secondary-color-alabaster;
   }
 
+  &__address,
+  &__email {
+    font-size: 1.2rem;
+  }
 
   &__applogo {
     &--img {
-      width: 20vw;
+      width: 40vw;
+      @include tablet {
+        width: 20vw;
+      }
     }
 
     @include tablet {
