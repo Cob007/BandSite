@@ -36,13 +36,13 @@ body {
 .nav-bar__applogo {
   width: 40vw;
   align-self: center;
-  padding: 32px;
+  padding: 24px;
 }
 @media screen and (min-width: 768px) {
   .nav-bar__applogo {
     width: 15vw;
     margin-left: 7vw;
-    padding: 32px 0 32px 0;
+    padding: 32px 0;
     align-self: flex-start;
   }
 }
@@ -70,7 +70,7 @@ body {
   }
 }
 .nav-bar__selected {
-  padding-bottom: 20px;
+  padding-bottom: 32px;
   border-bottom: 4px solid #FFFFFF;
 }
 @media screen and (min-width: 768px) {
@@ -90,7 +90,7 @@ body {
     flex-direction: row;
     align-self: center;
     justify-content: center;
-    padding: 32px 0 32px 0;
+    padding: 35px 0;
   }
 }
 .nav-bar__inactive {
