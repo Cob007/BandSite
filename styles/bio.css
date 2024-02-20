@@ -99,6 +99,105 @@ body {
   color: #FFFFFF;
 }
 
+.fcontainer {
+  position: relative;
+  background-color: #323232;
+  padding: 16px;
+  margin: 0px;
+}
+@media screen and (min-width: 768px) {
+  .fcontainer {
+    padding: 0 5vw 5vw 5vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .fcontainer__social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.fcontainer__title {
+  align-items: flex-start;
+  font-size: 2.5rem;
+  color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .fcontainer__title {
+    font-size: 3rem;
+  }
+}
+.fcontainer__list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (min-width: 768px) {
+  .fcontainer__list {
+    margin-left: 40px;
+  }
+}
+.fcontainer__item {
+  margin-right: 40px;
+}
+.fcontainer__img {
+  width: 40px;
+}
+.fcontainer__img--facebook {
+  width: 25px;
+}
+@media screen and (min-width: 768px) {
+  .fcontainer__img {
+    width: 3.5vw;
+  }
+  .fcontainer__img--facebook {
+    width: 2vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .fcontainer__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.fcontainer__newyork, .fcontainer__america {
+  flex-grow: 1;
+}
+.fcontainer__europe {
+  flex-grow: 2;
+}
+.fcontainer__name, .fcontainer__address, .fcontainer__email, .fcontainer__copyright {
+  line-height: 1.5rem;
+  color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .fcontainer__name, .fcontainer__address, .fcontainer__email, .fcontainer__copyright {
+    line-height: 2rem;
+  }
+}
+.fcontainer__address, .fcontainer__email {
+  font-size: 1rem;
+  text-decoration: none;
+}
+.fcontainer__applogo--img {
+  width: 40vw;
+}
+@media screen and (min-width: 768px) {
+  .fcontainer__applogo--img {
+    width: 20vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .fcontainer__applogo {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 50px 5vw 0 0;
+  }
+}
+
 .hero-container {
   width: 100%;
   height: 400px;
@@ -324,103 +423,4 @@ body {
   width: 100%;
   padding: 0px;
   margin: 0px;
-}
-
-.fcontainer {
-  position: relative;
-  background-color: #323232;
-  padding: 16px;
-  margin: 0px;
-}
-@media screen and (min-width: 768px) {
-  .fcontainer {
-    padding: 0 5vw 5vw 5vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .fcontainer__social {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  }
-}
-.fcontainer__title {
-  align-items: flex-start;
-  font-size: 2.5rem;
-  color: #FAFAFA;
-}
-@media screen and (min-width: 768px) {
-  .fcontainer__title {
-    font-size: 3rem;
-  }
-}
-.fcontainer__list {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-}
-@media screen and (min-width: 768px) {
-  .fcontainer__list {
-    margin-left: 40px;
-  }
-}
-.fcontainer__item {
-  margin-right: 40px;
-}
-.fcontainer__img {
-  width: 40px;
-}
-.fcontainer__img--facebook {
-  width: 25px;
-}
-@media screen and (min-width: 768px) {
-  .fcontainer__img {
-    width: 3.5vw;
-  }
-  .fcontainer__img--facebook {
-    width: 2vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .fcontainer__body {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-.fcontainer__newyork, .fcontainer__america {
-  flex-grow: 1;
-}
-.fcontainer__europe {
-  flex-grow: 2;
-}
-.fcontainer__name, .fcontainer__address, .fcontainer__email, .fcontainer__copyright {
-  line-height: 1.5rem;
-  color: #FAFAFA;
-}
-@media screen and (min-width: 768px) {
-  .fcontainer__name, .fcontainer__address, .fcontainer__email, .fcontainer__copyright {
-    line-height: 2rem;
-  }
-}
-.fcontainer__address, .fcontainer__email {
-  font-size: 1rem;
-  text-decoration: none;
-}
-.fcontainer__applogo--img {
-  width: 40vw;
-}
-@media screen and (min-width: 768px) {
-  .fcontainer__applogo--img {
-    width: 20vw;
-  }
-}
-@media screen and (min-width: 768px) {
-  .fcontainer__applogo {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 50px 5vw 0 0;
-  }
 }/*# sourceMappingURL=bio.css.map */
