@@ -33,6 +33,9 @@ body {
     align-items: center;
   }
 }
+.nav-bar__link {
+  align-self: center;
+}
 .nav-bar__applogo {
   width: 40vw;
   align-self: center;
