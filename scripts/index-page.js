@@ -20,72 +20,85 @@ const comments = [
 ];
 
 const commentEl = document.querySelector(".conversion-container");
-comments.forEach((comment) => {
-  console.log("initiated");
-  const commentContEl = document.createElement("div");
-  commentContEl.classList.add("conversion-container__comment");
 
-  const commentPPContEl = document.createElement("div");
-  commentPPContEl.classList.add("conversion-container__pp-img");
+const getComment = (comments) => {
+  comments.forEach((comment) => {
+    console.log("initiated");
 
-  const commentImageEl = document.createElement("img");
-  commentImageEl.classList.add("conversion-container__commenter-img");
+    const commentContEl = document.createElement("div");
+    commentContEl.classList.add("conversion-container__comment");
 
-  commentPPContEl.appendChild(commentImageEl);
-  commentContEl.appendChild(commentPPContEl);
+    const commentPPContEl = document.createElement("div");
+    commentPPContEl.classList.add("conversion-container__pp-img");
 
-  const commentDetailsContEl = document.createElement("div");
-  commentDetailsContEl.classList.add("conversion-container__comment-details");
+    const commentImageEl = document.createElement("img");
+    commentImageEl.classList.add("conversion-container__commenter-img");
 
-  const commentHeaderContEl = document.createElement("div");
-  commentHeaderContEl.classList.add("conversion-container__header");
+    commentPPContEl.appendChild(commentImageEl);
+    commentContEl.appendChild(commentPPContEl);
 
-  const commenterNameContEl = document.createElement("h3");
-  commenterNameContEl.classList.add("conversion-container__name");
+    const commentDetailsContEl = document.createElement("div");
+    commentDetailsContEl.classList.add("conversion-container__comment-details");
 
-  const commenterDateContEl = document.createElement("p");
-  commenterDateContEl.classList.add("conversion-container__date");
+    const commentHeaderContEl = document.createElement("div");
+    commentHeaderContEl.classList.add("conversion-container__header");
 
-  commenterNameContEl.textContent = comment.name;
-  commenterDateContEl.textContent = comment.date;
+    const commenterNameContEl = document.createElement("h3");
+    commenterNameContEl.classList.add("conversion-container__name");
 
-  commentHeaderContEl.appendChild(commenterNameContEl);
-  commentHeaderContEl.appendChild(commenterDateContEl);
+    const commenterDateContEl = document.createElement("p");
+    commenterDateContEl.classList.add("conversion-container__date");
 
-  commentDetailsContEl.appendChild(commentHeaderContEl);
+    commenterNameContEl.textContent = comment.name;
+    commenterDateContEl.textContent = comment.date;
 
-  const commenterDespContEl = document.createElement("div");
+    commentHeaderContEl.appendChild(commenterNameContEl);
+    commentHeaderContEl.appendChild(commenterDateContEl);
 
-  const commenterDespEl = document.createElement("p");
-  commenterDespEl.classList.add("conversion-container__desp");
+    commentDetailsContEl.appendChild(commentHeaderContEl);
 
-  commenterDespContEl.textContent = comment.description;
-  commenterDespContEl.appendChild(commenterDespEl);
-  
-  commentDetailsContEl.appendChild(commenterDespContEl);
-  commentContEl.appendChild(commentDetailsContEl);
+    const commenterDespContEl = document.createElement("div");
 
+    const commenterDespEl = document.createElement("p");
+    commenterDespEl.classList.add("conversion-container__desp");
 
+    commenterDespContEl.textContent = comment.description;
+    commenterDespContEl.appendChild(commenterDespEl);
 
-  //const commenterDividerEl = document.createElement("div");
-  //commenterDespEl.classList.add("conversion-container__divider");
-  //commentContEl.appendChild(commenterDividerEl)
-  commentEl.appendChild(commentContEl);
-  //commentEl.appendChild(commenterDividerEl);
+    commentDetailsContEl.appendChild(commenterDespContEl);
+    commentContEl.appendChild(commentDetailsContEl);
 
-});
+    commentEl.appendChild(commentContEl);
+
+    const commenterDividerEl = document.createElement("div");
+    commenterDividerEl.classList.add("conversion-container__divider");
+
+    commentEl.appendChild(commenterDividerEl);
+  });
+};
+
+getComment(comments);
 
 const commentFormEl = document.querySelector(".conversion-container__form");
 commentFormEl.addEventListener("submit", (e) => {
   e.preventDefault();
   console.log("name =", e.target.name.value);
   console.log("comment =", e.target.comment.value);
-  const commentObj = {
-    name: e.target.name.value,
-    comment: e.target.comment.value,
+  const nameCom = e.target.name.value;
+  const commentCom = e.target.comment.value;
+  if(nameCom.length === 0 && commentCom.length === 0){
+    return console.log("is empty")
+  }
+
+  const commentObj = [{
+    name: nameCom,
+    description: commentCom,
     date: "02/21/2024",
-  };
-  comments.push(commentObj);
-  console.log(comment);
-  commentFormEl.reset();
+  }];
+  //comments.push(commentObj);
+  e.target.name.value = "";
+  e.target.comment.value = "";
+  //or  the next line
+  //commentFormEl.reset();
+  getComment(commentObj);
 });
