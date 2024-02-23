@@ -267,7 +267,7 @@ body {
     margin: 24px 0;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1280px) {
   .about-container__title {
     margin: 36px 0;
   }

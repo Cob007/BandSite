@@ -196,4 +196,112 @@ body {
     right: 0;
     margin: 50px 5vw 0 0;
   }
+}
+
+.hero-container {
+  width: 100%;
+  height: 500px;
+  background-image: url("../assets/images/hero-shows.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .hero-container {
+    height: 600px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-container {
+    height: 700px;
+  }
+}
+.hero-container__name {
+  margin: 0;
+  font-size: 2rem;
+  color: #FFFFFF;
+  margin-left: 16px;
+}
+@media screen and (min-width: 768px) {
+  .hero-container__name {
+    font-size: 2.5rem;
+    margin-left: 7vw;
+  }
+}
+.hero-container__overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(50, 50, 50, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-container__ads-text {
+  font-size: 3.4rem;
+  color: #FFFFFF;
+  margin: 8px 16px;
+}
+@media screen and (min-width: 768px) {
+  .hero-container__ads-text {
+    font-size: 5rem;
+    margin-left: 7vw;
+  }
+}
+.hero-container__soundcloud {
+  margin: 16px;
+}
+@media screen and (min-width: 768px) {
+  .hero-container__soundcloud {
+    width: 40%;
+    margin-left: 7vw;
+  }
+}
+
+.shows-container {
+  padding: 16px;
+  background-color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .shows-container {
+    padding: 24px 7vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-container {
+    padding: 36px 7vw;
+  }
+}
+.shows-container__title {
+  align-items: flex-start;
+  font-size: 2rem;
+  margin: 16px 0;
+  color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .shows-container__title {
+    font-size: 3rem;
+    margin: 24px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-container__title {
+    margin: 36px 0;
+  }
+}
+.shows-container__ticket-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .shows-container__ticket-list {
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+  }
 }/*# sourceMappingURL=shows.css.map */
