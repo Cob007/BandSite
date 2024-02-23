@@ -86,8 +86,13 @@ commentFormEl.addEventListener("submit", (e) => {
   console.log("comment =", e.target.comment.value);
   const nameCom = e.target.name.value;
   const commentCom = e.target.comment.value;
+
   if(nameCom.length === 0 && commentCom.length === 0){
+    e.target.name.classList.add("conversion-container__error");
+    console.log("commentEl: ", e.target.comment)
+    e.target.comment.classList.add('conversion-container__error');
     return console.log("is empty")
+    
   }
 
   const commentObj = [{

@@ -290,18 +290,19 @@
     height: 50px;
     font-size: 1.2rem;
     padding: 0 16px;
-    border: 2px solid $primary-color-silver;
+    border: 1px solid $primary-color-silver;
     background-color: $secondary-color-alabaster;
     border-radius: 5px;
     font-family: "Avenir";
   }
 
+  
 
   &__textarea {
     height: 150px;
     font-size:1.2rem;
     padding: 16px;
-    border: 2px solid $primary-color-silver;
+    border: 1px solid $primary-color-silver;
     background-color: $secondary-color-alabaster;
     border-radius: 5px;
     font-family: "Avenir";
@@ -311,6 +312,11 @@
     font-family: "Avenir";
     font-size: 1.3rem;
     color: $primary-color-black;
+  }
+
+  &__error {
+    border: 1px solid #d22d2d;
+
   }
   
 
