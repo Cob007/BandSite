@@ -262,7 +262,7 @@ body {
 
 .shows-container {
   padding: 16px;
-  background-color: #FAFAFA;
+  background-color: #FFFFFF;
 }
 @media screen and (min-width: 768px) {
   .shows-container {
@@ -279,6 +279,7 @@ body {
   font-size: 2rem;
   margin: 16px 0;
   color: #000000;
+  padding: 0 16px;
 }
 @media screen and (min-width: 768px) {
   .shows-container__title {
@@ -307,10 +308,11 @@ body {
 .shows-container__ticket-item {
   background-color: #FAFAFA;
 }
-@media screen and (min-width: 768px) and (min-width: 768px) {
+@media screen and (min-width: 768px) {
   .shows-container__ticket {
     display: flex;
     flex-direction: row;
+    padding: 0 16px;
   }
 }
 .shows-container__ticket-header {
@@ -320,7 +322,14 @@ body {
   .shows-container__ticket-header {
     display: flex;
     flex-direction: row;
+    padding: 0 16px;
   }
+}
+.shows-container__ticket-item {
+  background-color: #FFFFFF;
+}
+.shows-container__ticket-item-clicked {
+  background-color: #E1E1E1;
 }
 @media screen and (min-width: 768px) {
   .shows-container__ticket-section {
@@ -372,6 +381,9 @@ body {
   .shows-container__button {
     width: 30%;
   }
+}
+.shows-container__ticket-item:hover {
+  background-color: #FAFAFA;
 }
 .shows-container__divider {
   width: 100%;
