@@ -234,6 +234,16 @@
     padding: 0 7vw 40px 7vw;
   }
 
+  &__conv-body {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+
   &__title {
     align-items: flex-start;
     font-size: 2rem;

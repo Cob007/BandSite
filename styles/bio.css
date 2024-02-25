@@ -16,7 +16,7 @@ html,
 body {
   padding: 0px;
   margin: 0px;
-  font-family: "Avenir";
+  font-family: "Avenir", serif, sans-serif;
 }
 
 .nav-bar {
@@ -435,6 +435,14 @@ body {
 @media screen and (min-width: 768px) {
   .conversion-container {
     padding: 0 7vw 40px 7vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .conversion-container__conv-body {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 .conversion-container__title {

@@ -70,6 +70,8 @@
 
   @include desktop {
     padding: 36px 7vw;
+    display: flex;
+    flex-direction: row;
   }
 
   &__title {
@@ -86,6 +88,14 @@
 
     @include desktop {
       margin: 36px 0;
+      width: 30%;
+    }
+  }
+
+  &__ticket-body {
+    @include desktop {
+      width: 100%;
+      margin-top: 50px;
     }
   }
 
@@ -107,13 +117,11 @@
   }
 
   &__ticket {
-      @include tablet {
-        display: flex;
-        flex-direction: row;
-        padding: 0 16px;
-
-      }
-    
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      padding: 0 16px;
+    }
   }
 
   &__ticket-header {

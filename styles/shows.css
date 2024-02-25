@@ -16,7 +16,7 @@ html,
 body {
   padding: 0px;
   margin: 0px;
-  font-family: "Avenir";
+  font-family: "Avenir", serif, sans-serif;
 }
 
 .nav-bar {
@@ -272,6 +272,8 @@ body {
 @media screen and (min-width: 1280px) {
   .shows-container {
     padding: 36px 7vw;
+    display: flex;
+    flex-direction: row;
   }
 }
 .shows-container__title {
@@ -290,6 +292,13 @@ body {
 @media screen and (min-width: 1280px) {
   .shows-container__title {
     margin: 36px 0;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-container__ticket-body {
+    width: 100%;
+    margin-top: 50px;
   }
 }
 .shows-container__ticket-list {
