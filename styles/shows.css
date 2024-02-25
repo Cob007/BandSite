@@ -16,7 +16,7 @@ html,
 body {
   padding: 0px;
   margin: 0px;
-  font-family: "Avenir";
+  font-family: "Avenir", serif, sans-serif;
 }
 
 .nav-bar {
@@ -196,4 +196,206 @@ body {
     right: 0;
     margin: 50px 5vw 0 0;
   }
+}
+
+.hero-container {
+  width: 100%;
+  height: 500px;
+  background-image: url("../assets/images/hero-shows.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .hero-container {
+    height: 600px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .hero-container {
+    height: 700px;
+  }
+}
+.hero-container__name {
+  margin: 0;
+  font-size: 2rem;
+  color: #FFFFFF;
+  margin-left: 16px;
+}
+@media screen and (min-width: 768px) {
+  .hero-container__name {
+    font-size: 2.5rem;
+    margin-left: 7vw;
+  }
+}
+.hero-container__overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(50, 50, 50, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.hero-container__ads-text {
+  font-size: 3.4rem;
+  color: #FFFFFF;
+  margin: 8px 16px;
+}
+@media screen and (min-width: 768px) {
+  .hero-container__ads-text {
+    font-size: 5rem;
+    margin-left: 7vw;
+  }
+}
+.hero-container__soundcloud {
+  margin: 16px;
+}
+@media screen and (min-width: 768px) {
+  .hero-container__soundcloud {
+    width: 40%;
+    margin-left: 7vw;
+  }
+}
+
+.shows-container {
+  padding: 16px;
+  background-color: #FFFFFF;
+}
+@media screen and (min-width: 768px) {
+  .shows-container {
+    padding: 24px 7vw;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-container {
+    padding: 36px 7vw;
+    display: flex;
+    flex-direction: row;
+  }
+}
+.shows-container__title {
+  align-items: flex-start;
+  font-size: 2rem;
+  margin: 16px 0;
+  color: #000000;
+  padding: 0 16px;
+}
+@media screen and (min-width: 768px) {
+  .shows-container__title {
+    font-size: 3rem;
+    margin: 24px 0;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-container__title {
+    margin: 36px 0;
+    width: 30%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .shows-container__ticket-body {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+.shows-container__ticket-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .shows-container__ticket-list {
+    margin: 0;
+    padding: 0;
+  }
+}
+.shows-container__ticket-item {
+  background-color: #FAFAFA;
+}
+@media screen and (min-width: 768px) {
+  .shows-container__ticket {
+    display: flex;
+    flex-direction: row;
+    padding: 0 16px;
+  }
+}
+.shows-container__ticket-header {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .shows-container__ticket-header {
+    display: flex;
+    flex-direction: row;
+    padding: 0 16px;
+  }
+}
+.shows-container__ticket-item {
+  background-color: #FFFFFF;
+}
+.shows-container__ticket-item-clicked {
+  background-color: #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .shows-container__ticket-section {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .shows-container__ticket-label-header {
+    display: flex;
+    width: 30%;
+    color: #AFAFAF;
+    font-size: 1rem;
+  }
+}
+.shows-container__ticket-label {
+  color: #AFAFAF;
+  font-size: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .shows-container__ticket-label {
+    display: none;
+  }
+}
+.shows-container__ticket-date {
+  color: #000000;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.shows-container__ticket-venue, .shows-container__ticket-location {
+  color: #323232;
+  font-size: 1.2rem;
+  margin: 0;
+}
+.shows-container__button {
+  width: 100%;
+  height: 60px;
+  font-size: 1.4rem;
+  color: #FFFFFF;
+  border: 2px solid #323232;
+  background-color: #323232;
+  border-radius: 5px;
+  margin: 20px 0;
+}
+@media screen and (min-width: 768px) {
+  .shows-container__button {
+    width: 30%;
+  }
+}
+.shows-container__ticket-item:hover {
+  background-color: #FAFAFA;
+}
+.shows-container__divider {
+  width: 100%;
+  height: 1px;
+  background-color: #E1E1E1;
 }/*# sourceMappingURL=shows.css.map */

@@ -68,7 +68,7 @@
       margin: 24px 0;
     }
 
-    @include tablet {
+    @include desktop {
       margin: 36px 0;
     }
   }
@@ -234,6 +234,16 @@
     padding: 0 7vw 40px 7vw;
   }
 
+  &__conv-body {
+    @include desktop {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+      margin: 0 auto;
+    }
+  }
+
+
   &__title {
     align-items: flex-start;
     font-size: 2rem;
@@ -290,18 +300,23 @@
     height: 50px;
     font-size: 1.2rem;
     padding: 0 16px;
-    border: 2px solid $primary-color-silver;
+    border: 1px solid $primary-color-silver;
     background-color: $secondary-color-alabaster;
     border-radius: 5px;
     font-family: "Avenir";
   }
 
+  &__input:focus {
+    outline: none !important;
+    border: 1px solid $primary-color-black;
+  }
+  
 
   &__textarea {
     height: 150px;
     font-size:1.2rem;
     padding: 16px;
-    border: 2px solid $primary-color-silver;
+    border: 1px solid $primary-color-silver;
     background-color: $secondary-color-alabaster;
     border-radius: 5px;
     font-family: "Avenir";
@@ -311,6 +326,15 @@
     font-family: "Avenir";
     font-size: 1.3rem;
     color: $primary-color-black;
+  }
+
+  &__textarea:focus {
+    outline: none !important;
+    border: 1px solid $primary-color-black;
+  }
+
+  &__error {
+    border: 1px solid #d22d2d;
   }
   
 
@@ -354,6 +378,11 @@
     flex-direction: row;
   }
 
+  &__comment-list {
+    list-style: none;
+    padding: 0;
+  }
+
   &__commenter-img {
     width: 70px;
     height: 70px;
@@ -364,6 +393,7 @@
   }
 
   &__comment-details{
+    width: 80%;
     display: flex;
     flex-direction: column;
     flex-grow: 2;

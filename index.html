@@ -29,19 +29,20 @@
       </nav>
     </header>
     <main>
-      <div class="hero-container">
+      <section class="hero-container">
         <div class="hero-container__overlay">
           <h1 class="hero-container__name">The Bees Knees</h1>
         </div>
-      </div>
-      <div class="about-container">
-        <div class="about-container__profile">
+      </section>
+      <article class="about-container">
+        <section class="about-container__profile">
           <h2 class="about-container__title about-container__title-padding">
             About the Musicians
           </h2>
           <img
             class="about-container__img-banner"
             src="./assets/images/band.jpg"
+            alt="banner image"
           />
           <p class="about-container__desp">
             “We push each other to be the best. It's not uncommon for one of us
@@ -82,8 +83,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="about-container__gallery">
+        </section>
+        <section class="about-container__gallery">
           <h2 class="about-container__title about-container__title-padding">
             Photo Gallery
           </h2>
@@ -152,100 +153,75 @@
               />
             </li>
           </ul>
-        </div>
-        <div class="conversion-container">
+        </section>
+        <article class="conversion-container">
           <h2 class="conversion-container__title">Join the Conversation</h2>
-          <div class="conversion-container__form-body">
-            <div class="conversion-container__pp-img">
-              <img
-                class="conversion-container__profile-img"
-                src="./assets/images/Mohan-muruge.jpg"
-              />
-            </div>
-            <form class="conversion-container__form">
-              <div class="conversion-container__form">
-                <label for="name" class="conversion-container__label"
-                  >NAME</label
-                >
-                <input
-                  type="text"
-                  name="name"
-                  class="conversion-container__input"
-                  name="name"
-                  placeholder="Enter your name"
+          <section class="conversion-container__conv-body">
+            <div class="conversion-container__form-body">
+              <div class="conversion-container__pp-img">
+                <img
+                  class="conversion-container__profile-img"
+                  src="./assets/images/Mohan-muruge.jpg"
+                  alt="profile picture"
                 />
               </div>
-              <div class="conversion-container__form conversion-container__top">
-                <label class="conversion-container__label">COMMENT</label>
-                <textarea name="comment" class="conversion-container__textarea" placeholder="Add a new comment"></textarea>
-              </div>
-              <div class="conversion-container__button-div">
-                <button type="submit" class="conversion-container__button">COMMENT</button>
-              </div>
-            </form>
-          </div>
-          <div class="conversion-container__divider"></div>
-          <!-- <div class="conversion-container__comment" > 
-            <div class="conversion-container__pp-img">
-              <img
-                class="conversion-container__commenter-img"
-              />
+              <form class="conversion-container__form">
+                <div class="conversion-container__form">
+                  <label for="name" class="conversion-container__label"
+                    >NAME</label
+                  >
+                  <input
+                    type="text"
+                    name="name"
+                    class="conversion-container__input"
+                    name="name"
+                    placeholder="Enter your name"
+                  />
+                </div>
+                <div class="conversion-container__form conversion-container__top">
+                  <label class="conversion-container__label">COMMENT</label>
+                  <textarea
+                    name="comment"
+                    class="conversion-container__textarea"
+                    placeholder="Add a new comment"
+                  ></textarea>
+                </div>
+                <div class="conversion-container__button-div">
+                  <button type="submit" class="conversion-container__button">
+                    COMMENT
+                  </button>
+                </div>
+              </form>
             </div>
-            <div class="conversion-container__comment-details">
-              <div class="conversion-container__header" >
-                <h3 class="conversion-container__name">Victor Pinto</h3>
-                <p class="conversion-container__date">10/20/2024</p>
+            <div class="conversion-container__divider"></div>
+            <ul class="conversion-container__comment-list">   
+            </ul>
+            <!--   *****SAMPLE****
+              
+              <div class="conversion-container__comment">
+              <div class="conversion-container__pp-img">
+                <img class="conversion-container__commenter-img" />
               </div>
-              <div>
-                <p class="conversion-container__desp">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.
-                </p>
+              <div class="conversion-container__comment-details">
+                <div class="conversion-container__header">
+                  <h3 class="conversion-container__name">Victor Pinto</h3>
+                  <p class="conversion-container__date">10/20/2024</p>
+                </div>
+                <div>
+                  <p class="conversion-container__desp">
+                    This is art.
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="conversion-container__divider"></div>
-          <div class="conversion-container__comment" > 
-            <div class="conversion-container__pp-img">
-              <img
-                class="conversion-container__commenter-img"
-              />
-            </div>
-            <div class="conversion-container__comment-details">
-              <div class="conversion-container__header" >
-                <h3 class="conversion-container__name">Victor Pinto</h3>
-                <p class="conversion-container__date">10/20/2024</p>
-              </div>
-              <div>
-                <p class="conversion-container__desp">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="conversion-container__divider"></div>
-          <div class="conversion-container__comment" > 
-            <div class="conversion-container__pp-img">
-              <img
-                class="conversion-container__commenter-img"
-              />
-            </div>
-            <div class="conversion-container__comment-details">
-              <div class="conversion-container__header" >
-                <h3 class="conversion-container__name">Victor Pinto</h3>
-                <p class="conversion-container__date">10/20/2024</p>
-              </div>
-              <div>
-                <p class="conversion-container__desp">This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.
-                </p>
-              </div>
-            </div>
-          </div> -->
-          <div class="conversion-container__divider"></div>
-        </div>
-      </div>
+            </div> -->
+          </section>
+        </article>
+      </article>
     </main>
     <footer>
-      <div class="fcontainer">
+      <article class="fcontainer">
         <div class="fcontainer__heading">
-          <div class="fcontainer__social">
+          <section class="fcontainer__social">
             <h2 class="fcontainer__title">Get In Touch</h2>
             <ul class="fcontainer__list">
               <li class="fcontainer__item">
@@ -276,9 +252,9 @@
                 </a>
               </li>
             </ul>
-          </div>
+          </section>
         </div>
-        <div class="fcontainer__body">
+        <section class="fcontainer__body">
           <div class="fcontainer__newyork">
             <h3 class="fcontainer__name">The Bees Knees Management</h3>
             <p class="fcontainer__address">
@@ -311,8 +287,8 @@
               >bookings@archentertainment.com</a
             >
           </div>
-        </div>
-        <div class="fcontainer__applogo">
+        </section>
+        <section class="fcontainer__applogo">
           <a href="#">
             <img
               class="fcontainer__applogo--img"
@@ -320,11 +296,11 @@
               alt="applogo"
             />
           </a>
-        </div>
+        </section>
         <p class="fcontainer__copyright">
           Copyright The Bees Knees © 2023 All Rights Reserved
         </p>
-      </div>
+      </article>
     </footer>
     <script src="./scripts/index-page.js"></script>
   </body>
