@@ -19,11 +19,14 @@ const comments = [
   },
 ];
 
-const commentEl = document.querySelector(".conversion-container");
+
+const ulCommentEl = document.querySelector(".conversion-container__comment-list")
 
 const getComment = (comments) => {
   comments.forEach((comment) => {
     console.log("initiated");
+
+    const liComment = document.createElement('li');
 
     const commentContEl = document.createElement("div");
     commentContEl.classList.add("conversion-container__comment");
@@ -68,16 +71,18 @@ const getComment = (comments) => {
     commentDetailsContEl.appendChild(commenterDespContEl);
     commentContEl.appendChild(commentDetailsContEl);
 
-    commentEl.appendChild(commentContEl);
+    liComment.appendChild(commentContEl);
 
     const commenterDividerEl = document.createElement("div");
     commenterDividerEl.classList.add("conversion-container__divider");
 
-    commentEl.appendChild(commenterDividerEl);
+    liComment.appendChild(commenterDividerEl);
+
+    ulCommentEl.prepend(liComment)
   });
 };
 
-getComment(comments);
+getComment(comments.reverse());
 
 const commentFormEl = document.querySelector(".conversion-container__form");
 commentFormEl.addEventListener("submit", (e) => {
@@ -92,7 +97,6 @@ commentFormEl.addEventListener("submit", (e) => {
     console.log("commentEl: ", e.target.comment)
     e.target.comment.classList.add('conversion-container__error');
     return console.log("is empty")
-    
   }
 
   const commentObj = [{
@@ -100,10 +104,8 @@ commentFormEl.addEventListener("submit", (e) => {
     description: commentCom,
     date: "02/21/2024",
   }];
-  //comments.push(commentObj);
+  comments.push(commentObj);
   e.target.name.value = "";
   e.target.comment.value = "";
-  //or  the next line
-  //commentFormEl.reset();
-  getComment(commentObj);
+  getComment([...commentObj])
 });
