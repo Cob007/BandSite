@@ -25,12 +25,23 @@ export class BandSiteApi {
   async getComment() {
     try {
       const getCommentURL = `${baseUrl}comments?api_key=${this.apiKey}`;
-
       const res = await axios.get(getCommentURL);
       return res.data;
     } catch (e) {
       console.log(e);
       return e;
     }
+  }
+
+
+  async getShows (){
+    try {
+        const getCommentURL = `${baseUrl}showdates?api_key=${this.apiKey}`;
+        const res = await axios.get(getCommentURL);
+        return res.data;
+      } catch (e) {
+        console.log(e);
+        return e;
+      }
   }
 }

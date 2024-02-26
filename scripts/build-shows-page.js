@@ -1,3 +1,5 @@
+import { BandSiteApi } from "./band-site-api.js";
+
 const tickets = [
   {
     date: "Mon Sept 09 2024",
@@ -31,12 +33,12 @@ const tickets = [
   },
 ];
 
-console.log(tickets);
+//console.log(tickets);
 
 const ulTicketEl = document.querySelector(".shows-container__ticket-list");
 const loadTickets = (tickets) => {
   tickets.forEach((ticket, index) => {
-    console.log(index, ": ", ticket);
+    //console.log(index, ": ", ticket);
     const liTicket = document.createElement("li");
     liTicket.classList.add("shows-container__ticket-item");
 
@@ -54,7 +56,7 @@ const loadTickets = (tickets) => {
 
     const dateEl = createEl("p");
     dateEl.classList.add("shows-container__ticket-date");
-    dateEl.textContent = ticket.date;
+    dateEl.textContent = usDateFormatter(ticket.date);
 
     dateSectionEl.appendChild(dateLabelEl);
     dateSectionEl.appendChild(dateEl)
@@ -68,7 +70,7 @@ const loadTickets = (tickets) => {
 
     const venueEl = createEl("p");
     venueEl.classList.add("shows-container__ticket-venue");
-    venueEl.textContent = ticket.venue;
+    venueEl.textContent = ticket.place;
 
     venueSectionEl.appendChild(venueLabelEl);
     venueSectionEl.appendChild(venueEl)
@@ -119,7 +121,22 @@ function createEl(type) {
   return document.createElement(type);
 }
 
-loadTickets(tickets);
+//loadTickets(tickets);
 
-const btnEl = document.querySelector(".shows-container__button");
-btnEl.addEventListener("click", () => {});
+const apiKey = {
+  api_key: "e1c9def6-f72f-423a-8052-28b80097f9be",
+};
+
+const getRometeShowsCall = async (key) => {
+  const api = new BandSiteApi(key);
+  const resApiData = await api.getShows();
+  loadTickets(resApiData)
+}
+
+const usDateFormatter = (timestamp) => {
+  const date = new Date(timestamp);
+  return date.toLocaleDateString("en-US");
+};
+
+
+getRometeShowsCall(apiKey.api_key)
