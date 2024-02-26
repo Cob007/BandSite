@@ -1,6 +1,36 @@
-class BandSiteApi {
+const baseUrl = "https://unit-2-project-api-25c1595833b2.herokuapp.com/";
 
-    constructor(apiKey){
-        this.apiKey = apiKey;
+export class BandSiteApi {
+  constructor(apiKey) {
+    this.apiKey = apiKey;
+  }
+
+  async postComment(commentData) {
+    try {
+      const header = {
+        "Content-Type": "application/json",
+      };
+      const getCommentURL = `${baseUrl}comments?api_key=${this.apiKey}`;
+      const res = await axios.post(getCommentURL, commentData, {
+        headers: header,
+      });
+      console.log(res)
+      return res.data
+    } catch (e) {
+      console.log(e);
+      return e;
     }
+  }
+
+  async getComment() {
+    try {
+      const getCommentURL = `${baseUrl}comments?api_key=${this.apiKey}`;
+
+      const res = await axios.get(getCommentURL);
+      return res.data;
+    } catch (e) {
+      console.log(e);
+      return e;
+    }
+  }
 }
