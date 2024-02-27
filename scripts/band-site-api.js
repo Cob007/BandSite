@@ -14,8 +14,8 @@ export class BandSiteApi {
       const res = await axios.post(getCommentURL, commentData, {
         headers: header,
       });
-      console.log(res)
-      return res.data
+      console.log(res);
+      return res.data;
     } catch (e) {
       console.log(e);
       return e;
@@ -33,15 +33,25 @@ export class BandSiteApi {
     }
   }
 
-
-  async getShows (){
+  async getShows() {
     try {
-        const getCommentURL = `${baseUrl}showdates?api_key=${this.apiKey}`;
-        const res = await axios.get(getCommentURL);
-        return res.data;
-      } catch (e) {
-        console.log(e);
-        return e;
-      }
+      const getCommentURL = `${baseUrl}showdates?api_key=${this.apiKey}`;
+      const res = await axios.get(getCommentURL);
+      return res.data;
+    } catch (e) {
+      console.log(e);
+      return e;
+    }
+  }
+}
+
+export class Converter {
+  constructor(timestamp) {
+    this.timestamp = timestamp;
+  }
+
+  getUsDateFormatter() {
+    const date = new Date(this.timestamp);
+    return date.toLocaleDateString("en-US");
   }
 }

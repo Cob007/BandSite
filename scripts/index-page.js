@@ -1,4 +1,4 @@
-import { BandSiteApi } from "./band-site-api.js";
+import { BandSiteApi, Converter } from "./band-site-api.js";
 
 const comments = [
   {
@@ -75,7 +75,8 @@ const getComment = (comments) => {
     commenterDateContEl.classList.add("conversion-container__date");
 
     commenterNameContEl.textContent = comment.name;
-    commenterDateContEl.textContent = usDateFormatter(comment.timestamp);
+    const usDate = new Converter(comment.timestamp);
+    commenterDateContEl.textContent = usDate.getUsDateFormatter();
 
     commentHeaderContEl.appendChild(commenterNameContEl);
     commentHeaderContEl.appendChild(commenterDateContEl);

@@ -1,4 +1,4 @@
-import { BandSiteApi } from "./band-site-api.js";
+import { BandSiteApi, Converter } from "./band-site-api.js";
 
 const tickets = [
   {
@@ -56,7 +56,11 @@ const loadTickets = (tickets) => {
 
     const dateEl = createEl("p");
     dateEl.classList.add("shows-container__ticket-date");
-    dateEl.textContent = usDateFormatter(ticket.date);
+    const usDate = new Converter(ticket.date);
+    dateEl.textContent = usDate.getUsDateFormatter();
+    //dateEl.textContent = usDateFormatter(ticket.date);
+
+
 
     dateSectionEl.appendChild(dateLabelEl);
     dateSectionEl.appendChild(dateEl)
