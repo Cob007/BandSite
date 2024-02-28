@@ -1,4 +1,4 @@
-import { BandSiteApi, Converter } from "./band-site-api.js";
+import * as apiClientProvider from './band-site-api.js'
 
 const comments = [
   {
@@ -26,8 +26,9 @@ const apiKey = {
 };
 
 const getRemoteCommentCall = async (key) => {
-  const api = new BandSiteApi(key);
-  const resApiData = await api.getComment();
+  //const api = new BandSiteApi(key);
+  const getCommentClient = new apiClientProvider.BandSiteApi(key)
+  const resApiData = await getCommentClient.getComment();
   getComment(resApiData);
 };
 
@@ -35,8 +36,8 @@ getRemoteCommentCall(apiKey.api_key);
 
 
 const postRemoteCommentCall = async (key, comment) => {
-  const api = new BandSiteApi(key);
-  const resApiData = await api.postComment(comment);
+  const postCommentClienct = new apiClientProvider.BandSiteApi(key);
+  const resApiData = await postCommentClienct.postComment(comment);
   return resApiData
 }
 
@@ -75,7 +76,7 @@ const getComment = (comments) => {
     commenterDateContEl.classList.add("conversion-container__date");
 
     commenterNameContEl.textContent = comment.name;
-    const usDate = new Converter(comment.timestamp);
+    const usDate = new apiClientProvider.Converter(comment.timestamp);
     commenterDateContEl.textContent = usDate.getUsDateFormatter();
 
     commentHeaderContEl.appendChild(commenterNameContEl);

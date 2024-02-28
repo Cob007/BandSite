@@ -58,7 +58,6 @@ const loadTickets = (tickets) => {
     dateEl.classList.add("shows-container__ticket-date");
     const usDate = new Converter(ticket.date);
     dateEl.textContent = usDate.getUsDateFormatter();
-    //dateEl.textContent = usDateFormatter(ticket.date);
 
 
 
