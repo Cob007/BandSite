@@ -55,3 +55,9 @@ export class Converter {
     return date.toLocaleDateString("en-US");
   }
 }
+
+export class Constant {
+  getApiKey() {
+    return "e1c9def6-f72f-423a-8052-28b80097f9be";
+  }
+}
