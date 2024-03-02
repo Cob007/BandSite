@@ -14,10 +14,8 @@ export class BandSiteApi {
       const res = await axios.post(getCommentURL, commentData, {
         headers: header,
       });
-      console.log(res);
       return res.data;
     } catch (e) {
-      console.log(e);
       return e;
     }
   }
@@ -28,7 +26,6 @@ export class BandSiteApi {
       const res = await axios.get(getCommentURL);
       return res.data;
     } catch (e) {
-      console.log(e);
       return e;
     }
   }
@@ -39,7 +36,6 @@ export class BandSiteApi {
       const res = await axios.get(getCommentURL);
       return res.data;
     } catch (e) {
-      console.log(e);
       return e;
     }
   }

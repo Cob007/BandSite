@@ -1,6 +1,6 @@
 import * as apiClientProvider from "./band-site-api.js";
 
-const apiKey = new apiClientProvider.Constant().getApiKey
+const apiKey = new apiClientProvider.Constant().getApiKey();
 
 const getRemoteCommentCall = async (key) => {
   const getCommentClient = new apiClientProvider.BandSiteApi(key);
@@ -100,10 +100,7 @@ commentFormEl.addEventListener("submit", async (e) => {
     comment: commentCom,
   };
 
-  const uploadedComment = await postRemoteCommentCall(
-    apiKey, 
-    commentObj
-  );
+  const uploadedComment = await postRemoteCommentCall(apiKey, commentObj);
 
   e.target.name.value = "";
   e.target.comment.value = "";

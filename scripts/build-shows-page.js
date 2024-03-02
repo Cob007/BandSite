@@ -88,4 +88,4 @@ const getRometeShowsCall = async (key) => {
   loadTickets(resApiData);
 };
 
-getRometeShowsCall(new apiClientProvider.Constant().getApiKey);
+getRometeShowsCall(new apiClientProvider.Constant().getApiKey());
