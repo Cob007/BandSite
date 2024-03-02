@@ -1,32 +1,28 @@
-const comments = [
-  {
-    name: "Victor Pinto",
-    date: "11/02/2023",
-    description:
-      "This is art. This is inexplicable magic expressed in the purest way, everything that makes up this majestic work deserves reverence. Let us appreciate this for what it is and what it contains.",
-  },
-  {
-    name: "Christina Cabrera",
-    date: "10/28/2023",
-    description:
-      "I feel blessed to have seen them in person. What a show! They were just perfection. If there was one day of my life I could relive, this would be it. What an incredible day.",
-  },
-  {
-    name: "Isaac Tadesse",
-    date: "10/20/2023",
-    description:
-      "I can't stop listening. Every time I hear one of their songs - the vocals - it gives me goosebumps. Shivers straight down my spine. What a beautiful expression of creativity. Can't get enough.",
-  },
-];
+import * as apiClientProvider from "./band-site-api.js";
 
+const apiKey = new apiClientProvider.Constant().getApiKey();
 
-const ulCommentEl = document.querySelector(".conversion-container__comment-list")
+const getRemoteCommentCall = async (key) => {
+  const getCommentClient = new apiClientProvider.BandSiteApi(key);
+  const resApiData = await getCommentClient.getComment();
+  getComment(resApiData);
+};
+
+getRemoteCommentCall(apiKey);
+
+const postRemoteCommentCall = async (key, comment) => {
+  const postCommentClienct = new apiClientProvider.BandSiteApi(key);
+  const resApiData = await postCommentClienct.postComment(comment);
+  return resApiData;
+};
+
+const ulCommentEl = document.querySelector(
+  ".conversion-container__comment-list"
+);
 
 const getComment = (comments) => {
   comments.forEach((comment) => {
-    console.log("initiated");
-
-    const liComment = document.createElement('li');
+    const liComment = document.createElement("li");
 
     const commentContEl = document.createElement("div");
     commentContEl.classList.add("conversion-container__comment");
@@ -53,7 +49,8 @@ const getComment = (comments) => {
     commenterDateContEl.classList.add("conversion-container__date");
 
     commenterNameContEl.textContent = comment.name;
-    commenterDateContEl.textContent = comment.date;
+    const usDateFormat = new apiClientProvider.Converter(comment.timestamp);
+    commenterDateContEl.textContent = usDateFormat.getUsDateFormatter();
 
     commentHeaderContEl.appendChild(commenterNameContEl);
     commentHeaderContEl.appendChild(commenterDateContEl);
@@ -65,7 +62,7 @@ const getComment = (comments) => {
     const commenterDespEl = document.createElement("p");
     commenterDespEl.classList.add("conversion-container__desp");
 
-    commenterDespContEl.textContent = comment.description;
+    commenterDespContEl.textContent = comment.comment;
     commenterDespContEl.appendChild(commenterDespEl);
 
     commentDetailsContEl.appendChild(commenterDespContEl);
@@ -78,37 +75,34 @@ const getComment = (comments) => {
 
     liComment.appendChild(commenterDividerEl);
 
-    ulCommentEl.prepend(liComment)
+    ulCommentEl.prepend(liComment);
   });
 };
 
-getComment(comments.reverse());
-
 const commentFormEl = document.querySelector(".conversion-container__form");
-commentFormEl.addEventListener("submit", (e) => {
+commentFormEl.addEventListener("submit", async (e) => {
   e.preventDefault();
-  console.log("name =", e.target.name.value);
-  console.log("comment =", e.target.comment.value);
   const nameCom = e.target.name.value;
   const commentCom = e.target.comment.value;
 
-  if(nameCom.length === 0){
+  if (nameCom.length === 0) {
     e.target.name.classList.add("conversion-container__error");
     return;
   }
 
-  if(commentCom.length === 0){
-    e.target.comment.classList.add('conversion-container__error');
+  if (commentCom.length === 0) {
+    e.target.comment.classList.add("conversion-container__error");
     return;
   }
 
-  const commentObj = [{
+  const commentObj = {
     name: nameCom,
-    description: commentCom,
-    date: "02/21/2024",
-  }];
-  comments.push(commentObj);
+    comment: commentCom,
+  };
+
+  const uploadedComment = await postRemoteCommentCall(apiKey, commentObj);
+
   e.target.name.value = "";
   e.target.comment.value = "";
-  getComment([...commentObj])
+  getComment([...[uploadedComment]]);
 });
